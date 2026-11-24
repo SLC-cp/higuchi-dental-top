@@ -1,0 +1,12 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Main.dc.html": {"expand": "fill", "h": 8000, "title": "TOP PC", "w": 1400, "x": 0, "y": 0},
+    "Main2.dc.html": {"expand": "fill", "h": 8000, "title": "TOP PC（既存FV版）", "w": 1400, "x": 1912, "y": 0},
+    "SP.dc.html": {"expand": "fill", "h": 8000, "title": "TOP SP", "w": 390, "x": 1461, "y": 0},
+    "SP2.dc.html": {"expand": "fill", "h": 8000, "title": "TOP SP（既存FV版）", "w": 390, "x": 3400, "y": 0}
+  },
+  "order": ["Main.dc.html", "SP.dc.html", "Main2.dc.html", "SP2.dc.html"],
+  "title": "ひぐち歯科医院 TOPカンプ"
+}
