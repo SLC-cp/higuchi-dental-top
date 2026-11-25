@@ -942,5 +942,18 @@ body{background:#e9e9ec}
 <div class="fixed-sp"><a class="w" href="#">24時間 WEB予約</a><a class="t" href="#">電話する</a><a class="c" href="#">無料相談</a></div>
 </div>
 
+<script>
+/* PC: デザイン幅1400pxを基準に、画面幅に合わせて拡大縮小(カンプと同じ見た目にする) */
+(function(){
+  var p=document.querySelector('.pg');
+  function fit(){
+    var w=window.innerWidth;
+    if(w<=768){p.style.width='';p.style.zoom='';return;}
+    p.style.width='1400px';
+    p.style.zoom=Math.min(1,w/1400);
+  }
+  fit();window.addEventListener('resize',fit);
+})();
+</script>
 </body>
 </html>
