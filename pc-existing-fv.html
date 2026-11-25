@@ -943,14 +943,17 @@ body{background:#e9e9ec}
 </div>
 
 <script>
-/* PC: デザイン幅1400pxを基準に、画面幅に合わせて拡大縮小(カンプと同じ見た目にする) */
+/* PC: 画面幅に合わせて各ブロックの縮尺だけを調整(カンプと同じレイアウトを保つ) */
 (function(){
   var p=document.querySelector('.pg');
+  var els=[].slice.call(document.querySelectorAll('.pg main > section,.pg > footer'));
+  els.forEach(function(e){e.dataset.z=parseFloat(getComputedStyle(e).zoom)||1;});
   function fit(){
-    var w=window.innerWidth;
-    if(w<=768){p.style.width='';p.style.zoom='';return;}
-    p.style.width='1400px';
-    p.style.zoom=Math.min(1,w/1400);
+    var w=document.documentElement.clientWidth;
+    if(w<=768){p.style.width='';els.forEach(function(e){e.style.zoom='';});return;}
+    var pw=Math.min(w,1400),s=pw/1400;
+    p.style.width=pw+'px';
+    els.forEach(function(e){e.style.zoom=(e.dataset.z*s);});
   }
   fit();window.addEventListener('resize',fit);
 })();
