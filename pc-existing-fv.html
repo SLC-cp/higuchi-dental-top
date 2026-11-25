@@ -443,9 +443,15 @@ body{margin:0}
 .pg main > section.info{zoom:1}
 .pg main > section.dr2{zoom:.75}
 .pg .dr2 .ttl{position:relative;left:0;width:100%;padding-left:0;text-align:center}
-.pg .dr2 .wrap{left:198px;width:1256px}
-.pg .dr2 .pic{width:396px;height:620px}
-.pg .dr2 .prof{width:860px;padding:42px 40px 36px 70px}
+.pg .dr2 .wrap{left:160px;width:1320px}
+.pg .dr2 .pic{width:380px;height:600px}
+.pg .dr2 .prof{width:1000px;padding:42px 100px 36px 70px}
+@media (min-width:769px){
+.pg .dr2 .cols{grid-template-columns:1fr 1fr 1fr;gap:0 28px}
+.pg .dr2 .cols>div{display:contents}
+.pg .dr2 .cols>div:first-child .g:nth-child(2){order:3}
+.pg .dr2 .g{border-bottom:0;margin-bottom:0;padding-bottom:0}
+}
 .pg .dr2 .role{font-size:23px}
 .pg .dr2 h3 .dr{width:66px;height:66px;font-size:19px}
 .pg .dr2 h3 .name{font-size:60px}
