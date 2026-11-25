@@ -116,6 +116,9 @@ body{margin:0}
 .pg .fx ul{list-style:none;font-family:"Noto Sans JP",sans-serif;font-size:25px;line-height:1.7;padding:0;margin:0}
 .pg .fx li{display:flex;gap:10px;margin-bottom:8px;color:var(--ink)}
 .pg .fx li::before{content:"✓";flex:0 0 20px;height:20px;margin-top:7px;border:1.6px solid var(--navy);color:var(--navy);font-size:13px;line-height:15px;text-align:center;font-weight:700}
+.pg .fx .hd{position:relative}
+.pg .fx .hd .num{position:absolute;left:26px;top:50%;transform:translateY(-52%);font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;font-size:68px;line-height:1;color:rgba(13,34,72,.32)}
+.pg .fx .cd.nv .hd .num{color:rgba(255,255,255,.45)}
 .pg .fx .vm{margin-top:auto;align-self:flex-end;font-size:19px;letter-spacing:.08em;color:var(--ink)}
 .pg .fx .vm span{border-bottom:1px solid var(--ink);padding-bottom:1px}
 @media (min-width:769px){
@@ -437,6 +440,13 @@ body{margin:0}
 .pg .fv2 .info2 .cl>p:first-child{border-top:0;margin-top:0;padding-top:0}
 .pg .fv2 .info2 .cl>p.tel2{display:flex;flex-direction:row;justify-content:center;font-size:32px}
 .pg .fv2 .info2 .cl>p.ad,.pg .fv2 .info2 .cl>p.hr2{font-size:16.5px;line-height:1.85;white-space:nowrap}
+/* ノートPC1画面に収めるため、PC表示のみ各ブロックを縮小 */
+@media (min-width:769px){
+.pg main > section,.pg > footer{zoom:.85}
+.pg main > section.dr2{zoom:.66}
+.pg main > section.imp{zoom:.78}
+.pg main > section.acc{zoom:.8}
+}
 @media (max-width:768px){
   .pg .fv2 .g{display:none}
   .pg .fv2 .info2 .cl>p.ad,.pg .fv2 .info2 .cl>p.hr2{font-size:12.5px;white-space:normal}
@@ -560,6 +570,7 @@ body{margin:0}
   .pg .fx .ph{flex:0 0 auto;height:190px}
   .pg .fx .hd{height:auto;min-height:56px;padding:12px 16px;font-size:20px}.pg .fx .hd b{font-size:25px}
   .pg .fx .bdy{padding:16px 16px 14px}
+  .pg .fx .hd .num{font-size:40px;left:12px}
   .pg .fx .lb{font-size:13px;padding:0 16px;margin-bottom:16px}.pg .fx ul{font-size:16.5px}.pg .fx .vm{font-size:16px}
   .pg .spec{margin-top:60px}
   .pg .spec .strip{grid-template-columns:1fr 1fr;height:300px}
@@ -724,11 +735,11 @@ body{margin:0}
     <div class="ring"><span class="e">FEATURES</span><span style="font-size:36px">当院の<b style="font-weight:500;font-size:1.25em">4つ</b>の特徴</span></div>
   </div>
   <div class="grid" style="position: relative">
-    <div class="cd"><div class="ph"><img src="/_blob/2a73843e4a9bd1a105334905d9396ff9" alt="" style="object-position:50% 0%"></div><div class="in"><p class="hd"><span>「<b>補綴専門医</b>」が診る</span></p><div class="bdy"><p class="lb">お口全体を診てほしい方向け</p><ul><li>補綴・インプラントの専門医が在籍</li><li>被せ物・入れ歯・噛み合わせまで</li><li>お口全体を見て治療計画を立案</li></ul><a class="vm" href="#"><span>View More ›</span></a></div></div></div>
-    <div class="cd nv"><div class="ph"><img src="/_blob/1462aa0810f73dffaa0e7022154490cd" alt=""></div><div class="in"><p class="hd"><span>「<b>CT</b>」による精密診断</span></p><div class="bdy"><p class="lb">精度の高い診断を望む方向け</p><ul><li>歯科用CTで立体的に確認</li><li>骨や神経の位置まで把握</li><li>親知らず・根管治療の診断にも<span class="note">要確認</span></li></ul><a class="vm" href="#"><span>View More ›</span></a></div></div></div>
-    <div class="cd"><div class="ph"><img src="/_blob/6d03cd5fa0b908f74b7f6f1a4802453d" alt=""></div><div class="in"><p class="hd"><span>「<b>保険診療</b>」対応</span></p><div class="bdy"><p class="lb">保険診療で受けたい方向け</p><ul><li>むし歯・歯周病など保険診療に対応</li><li>施設基準を届出済</li><li>入れ歯・被せ物もご相談可</li></ul><a class="vm" href="#"><span>View More ›</span></a></div></div></div>
-    <div class="cd nv"><div class="ph"><img src="/_blob/1adfd09374c28b377186e1845c5fa95a" alt=""></div><div class="in"><p class="hd"><span>24時間<b>「WEB予約」</b></span></p><div class="bdy"><p class="lb">お忙しい方・夜に調べる方向け</p><ul><li>診療時間外もWEBから予約</li><li>スマートフォンで完結</li><li>お電話は 024-542-0648</li></ul><a class="vm" href="#"><span>View More ›</span></a></div></div></div>
-  <span class="n" style="top: 331px; position: absolute; font-size: 300px; left: 892px; font-family: &quot;Cormorant Garamond&quot;, serif; font-style: italic; line-height: 1; color: rgba(13, 34, 72, 0.16); text-align: center">2</span><span class="n" style="position: absolute; left: 104px; top: -104px; font-size: 300px; font-family: &quot;Cormorant Garamond&quot;, serif; font-style: italic; line-height: 1; color: rgba(13, 34, 72, 0.16); text-align: center; width: 633px; height: 340px">1</span><span class="n" style="left: 388px; top: 727px; position: absolute; font-size: 270px; font-family: &quot;Cormorant Garamond&quot;, serif; font-style: italic; line-height: 1; color: rgba(13, 34, 72, 0.16); text-align: center">3</span><span class="n" style="top: 1174px; position: absolute; font-size: 270px; left: 883px; font-family: &quot;Cormorant Garamond&quot;, serif; font-style: italic; line-height: 1; color: rgba(13, 34, 72, 0.16); text-align: center">4</span></div>
+    <div class="cd"><div class="ph"><img src="/_blob/2a73843e4a9bd1a105334905d9396ff9" alt="" style="object-position:50% 0%"></div><div class="in"><p class="hd"><i class="num">1</i><span>「<b>補綴専門医</b>」が診る</span></p><div class="bdy"><p class="lb">お口全体を診てほしい方向け</p><ul><li>補綴・インプラントの専門医が在籍</li><li>被せ物・入れ歯・噛み合わせまで</li><li>お口全体を見て治療計画を立案</li></ul><a class="vm" href="#"><span>View More ›</span></a></div></div></div>
+    <div class="cd nv"><div class="ph"><img src="/_blob/1462aa0810f73dffaa0e7022154490cd" alt=""></div><div class="in"><p class="hd"><i class="num">2</i><span>「<b>CT</b>」による精密診断</span></p><div class="bdy"><p class="lb">精度の高い診断を望む方向け</p><ul><li>歯科用CTで立体的に確認</li><li>骨や神経の位置まで把握</li><li>親知らず・根管治療の診断にも<span class="note">要確認</span></li></ul><a class="vm" href="#"><span>View More ›</span></a></div></div></div>
+    <div class="cd"><div class="ph"><img src="/_blob/6d03cd5fa0b908f74b7f6f1a4802453d" alt=""></div><div class="in"><p class="hd"><i class="num">3</i><span>「<b>保険診療</b>」対応</span></p><div class="bdy"><p class="lb">保険診療で受けたい方向け</p><ul><li>むし歯・歯周病など保険診療に対応</li><li>施設基準を届出済</li><li>入れ歯・被せ物もご相談可</li></ul><a class="vm" href="#"><span>View More ›</span></a></div></div></div>
+    <div class="cd nv"><div class="ph"><img src="/_blob/1adfd09374c28b377186e1845c5fa95a" alt=""></div><div class="in"><p class="hd"><i class="num">4</i><span>24時間<b>「WEB予約」</b></span></p><div class="bdy"><p class="lb">お忙しい方・夜に調べる方向け</p><ul><li>診療時間外もWEBから予約</li><li>スマートフォンで完結</li><li>お電話は 024-542-0648</li></ul><a class="vm" href="#"><span>View More ›</span></a></div></div></div>
+  </div>
 </section>
 
 <section class="pol2" id="philosophy">
